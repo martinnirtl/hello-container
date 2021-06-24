@@ -5,11 +5,14 @@ const port = process.env.PORT || 3000;
 
 const logger = pino({
   prettyPrint: process.env.NODE_ENV !== 'production',
+  formatters: {
+    level: label => ({ level: label }),
+  }
 })
 
 const app = express();
 
-app.get('/', (req, res) => res.send('hello docker'));
+app.get('/', (req, res) => res.send('hello container'));
 
 app.get('/hello', (req, res) => res.send('hello world'))
 

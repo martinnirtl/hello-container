@@ -1,7 +1,7 @@
 {
   "name": "hello-container",
   "version": "1.0.0",
-  "description": "NodeJS based application for demoing Docker",
+  "description": "NodeJS based application to demo container-related technologies",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config src/index.js .env",
