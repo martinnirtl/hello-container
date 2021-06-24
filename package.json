@@ -1,0 +1,32 @@
+{
+  "name": "hello-container",
+  "version": "1.0.0",
+  "description": "NodeJS based application for demoing Docker",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config src/index.js .env",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinnirtl/hello-container.git"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "Martin Nirtl <martin@nirtl.rocks>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinnirtl/hello-container/issues"
+  },
+  "homepage": "https://github.com/martinnirtl/hello-container#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pino": "^6.11.3",
+    "pino-pretty": "^5.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
