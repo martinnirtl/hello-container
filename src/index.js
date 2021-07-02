@@ -25,4 +25,6 @@ app.get('/hello', log, (_req, res) => res.send('hello world'));
 
 app.get('/hello/:name', log, (req, res) => res.send(`hello ${req.params.name}`));
 
+app.get('/hello/:name/:greeting', log, (req, res) => res.send(`${req.params.greeting} ${req.params.name}`));
+
 app.listen(port, () => logger.info(`app listening on port ${port}`));
