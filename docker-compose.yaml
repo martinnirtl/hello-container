@@ -1,11 +1,8 @@
-version: "2"
-
-services: 
-  hello-container: 
+services:
+  hello-container:
     container_name: hello
     build: .
     image: hello-container:local
-    # entrypoint: tail -f /dev/null
     environment:
       - PORT=3000
     ports:

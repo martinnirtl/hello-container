@@ -5,7 +5,9 @@ const port = process.env.PORT || 3000;
 
 const logger = pino({
   level: 'debug',
-  prettyPrint: process.env.NODE_ENV !== 'production',
+  ...(process.env.NODE_ENV !== 'production' && {
+    transport: { target: 'pino-pretty' },
+  }),
   formatters: {
     level: label => ({ level: label }),
   },
