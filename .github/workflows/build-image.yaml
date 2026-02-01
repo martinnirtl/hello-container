@@ -78,6 +78,7 @@ jobs:
           image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build.outputs.digest }}
           artifact-name: sbom-spdx.json
           output-file: sbom-spdx.json
+          dependency-snapshot: false
 
       - name: Attest SBOM
         if: github.event_name != 'pull_request'
